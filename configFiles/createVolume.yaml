@@ -19,10 +19,12 @@ kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
   name: shared-pvc
+  annotations:
+    volume.beta.kubernetes.io/storage-class: ceph-storageclass-c3-cc
 spec:
   accessModes:
     - ReadWriteOnce
+  storageClassName: "ceph-storageclass-c3-cc"
   resources:
     requests:
       storage: 1Gi
-  storageClassName: "ceph-storageclass-c3-cc"
