@@ -26,6 +26,3 @@ spec:
   resources:
     requests:
       storage: 8Gi
-  selector:
-    matchLabels:
-      name: dockervolume
