@@ -21,7 +21,7 @@ metadata:
   name: shared-pvc
 spec:
   accessModes:
-    - ReadWriteOnce
+    - ReadOnlyMany
   storageClassName: "ceph-storageclass-c3-cc"
   resources:
     requests:
