@@ -22,7 +22,7 @@ metadata:
 spec:
   storageClassName: ceph-storageclass-c3-cc
   accessModes:
-    - ReadOnlyMany
+    - ReadWriteOnce
   resources:
     requests:
       storage: 1Gi
