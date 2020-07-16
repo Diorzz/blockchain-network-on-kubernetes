@@ -7,7 +7,7 @@ metadata:
 spec:
   accessModes:
     - ReadWriteOnce
+  storageClassName: "ceph-storageclass-c3-cc"
   resources:
     requests:
       storage: 2Gi
-  storageClassName: "ceph-storageclass-c3-cc"
