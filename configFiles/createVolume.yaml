@@ -1,18 +1,18 @@
----
-kind: PersistentVolume
-apiVersion: v1
-metadata:
-  name: shared-pv
-  labels:
-    type: local
-    name: sharedvolume
-spec:
-  capacity:
-    storage: 1Gi
-  accessModes:
-    - ReadWriteMany
-  hostPath:
-    path: "/tmp"
+# ---
+# kind: PersistentVolume
+# apiVersion: v1
+# metadata:
+#   name: shared-pv
+#   labels:
+#     type: local
+#     name: sharedvolume
+# spec:
+#   capacity:
+#     storage: 1Gi
+#   accessModes:
+#     - ReadWriteMany
+#   hostPath:
+#     path: "/tmp"
 
 ---
 kind: PersistentVolumeClaim
@@ -21,11 +21,11 @@ metadata:
   name: shared-pvc
 spec:
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   resources:
     requests:
       storage: 1Gi
-  storageClassName: ""
+  storageClassName: "ceph-storageclass"
   selector:
     matchLabels:
       name: sharedvolume
