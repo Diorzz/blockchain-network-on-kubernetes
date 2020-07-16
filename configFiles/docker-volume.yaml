@@ -19,8 +19,6 @@ kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
   name: docker-pvc
-  annotations:
-    volume.beta.kubernetes.io/storage-class: ceph-storageclass
 spec:
   storageClassName: ceph-storageclass-c3-cc
   accessModes:
