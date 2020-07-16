@@ -9,5 +9,5 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 9Gi
+      storage: 2Gi
   storageClassName: "ceph-storageclass-c3-cc"
