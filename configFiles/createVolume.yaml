@@ -26,6 +26,3 @@ spec:
     requests:
       storage: 1Gi
   storageClassName: "ceph-storageclass-c3-cc"
-  selector:
-    matchLabels:
-      name: sharedvolume

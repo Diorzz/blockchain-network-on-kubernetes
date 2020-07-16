@@ -14,9 +14,9 @@ spec:
       - name: sharedvolume
         persistentVolumeClaim:
           claimName: shared-pvc
-      - name: dockersocket
-        hostPath:
-          path: /var/run/docker.sock
+      # - name: dockersocket
+      #   hostPath:
+      #     path: /var/run/docker.sock
       containers:
       - name: copyartifacts
         image: alpine:3.7
