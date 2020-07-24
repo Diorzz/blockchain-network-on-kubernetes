@@ -115,6 +115,10 @@ while [ "${JOBSTATUS}" != "1/1" ]; do
     JOBSTATUS=$(kubectl get jobs |grep utils|awk '{print $2}')
 done
 
+./clean.sh
+sleep 3
+
+
 
 # Create services for all peers, ca, orderer
 echo -e "\nCreating Services for blockchain network"
